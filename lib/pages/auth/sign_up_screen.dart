@@ -1,5 +1,7 @@
 import 'package:fbbloc/blocs/sign_up_bloc/sign_up_bloc_bloc.dart';
-import 'package:fbbloc/screens/components/my_text_field.dart';
+import 'package:fbbloc/constants/colors.dart';
+import 'package:fbbloc/constants/components/my_text_field.dart';
+import 'package:fbbloc/services/shared_pref.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:user_repository/user_repository.dart';
 import 'package:flutter/cupertino.dart';
@@ -161,21 +163,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         "⚈  1 uppercase",
                         style: TextStyle(
                             color: containsUpperCase
-                                ? Colors.green
+                                ? AppColors.done
                                 : Theme.of(context).colorScheme.onBackground),
                       ),
                       Text(
                         "⚈  1 lowercase",
                         style: TextStyle(
                             color: containsLowerCase
-                                ? Colors.green
+                                ? AppColors.done
                                 : Theme.of(context).colorScheme.onBackground),
                       ),
                       Text(
                         "⚈  1 number",
                         style: TextStyle(
                             color: containsNumber
-                                ? Colors.green
+                                ? AppColors.done
                                 : Theme.of(context).colorScheme.onBackground),
                       ),
                     ],
@@ -187,14 +189,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         "⚈  1 special character",
                         style: TextStyle(
                             color: containsSpecialChar
-                                ? Colors.green
+                                ? AppColors.done
                                 : Theme.of(context).colorScheme.onBackground),
                       ),
                       Text(
                         "⚈  8 minimum character",
                         style: TextStyle(
                             color: contains8Length
-                                ? Colors.green
+                                ? AppColors.done
                                 : Theme.of(context).colorScheme.onBackground),
                       ),
                     ],
@@ -231,6 +233,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 email: emailController.text,
                                 name: nameController.text,
                               );
+                              sharedPreference.saveEmail(emailController.text);
+                              sharedPreference.saveName(nameController.text);
                               setState(() {
                                 context.read<SignUpBlocBloc>().add(
                                     SignUpRequired(

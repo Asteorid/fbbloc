@@ -1,3 +1,4 @@
+import 'package:fbbloc/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
@@ -30,6 +31,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(color: AppColors.inputTextColor),
       validator: validator,
       controller: controller,
       obscureText: obscureText,

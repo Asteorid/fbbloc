@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:fbbloc/blocs/authentification_bloc/authentification_bloc_bloc.dart';
 import 'package:fbbloc/blocs/sign_in_bloc/sign_in_bloc_bloc.dart';
 import 'package:fbbloc/blocs/sign_up_bloc/sign_up_bloc_bloc.dart';
-import 'package:fbbloc/screens/auth/sign_in_screen.dart';
-import 'package:fbbloc/screens/auth/sign_up_screen.dart';
+import 'package:fbbloc/pages/auth/sign_in_screen.dart';
+import 'package:fbbloc/pages/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -70,6 +70,29 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
                 child: Container(),
+              ),
+              const Align(
+                alignment: Alignment.topCenter,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 250,
+                    ),
+                    Padding(
+                        padding: EdgeInsets.only(right: 20.0),
+                        child: Text(
+                          'Instunder',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 70,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Great Vibes',
+                              color: Color.fromARGB(255, 34, 34, 34),
+                              fontStyle: FontStyle.italic),
+                        ))
+                  ],
+                ),
               ),
               Align(
                 alignment: Alignment.bottomCenter,

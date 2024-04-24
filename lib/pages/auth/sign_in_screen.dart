@@ -1,5 +1,5 @@
 import 'package:fbbloc/blocs/sign_in_bloc/sign_in_bloc_bloc.dart';
-import 'package:fbbloc/screens/components/my_text_field.dart';
+import 'package:fbbloc/constants/components/my_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "871517290757",
+    "project_id": "fbbloc-66144",
+    "storage_bucket": "fbbloc-66144.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871517290757:android:416e0d846fc6673085376c",
+        "android_client_info": {
+          "package_name": "com.example.fbbloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvj3nlNtskYXnuzuygNOaGLuoYkJvLQPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
